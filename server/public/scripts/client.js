@@ -1,4 +1,4 @@
-let movieApp = angular.module("movieApp", ['ngRoute']);
+let movieApp = angular.module("movieApp", ['ngRoute', 'ngMaterial']);
 
 movieApp.config(function($routeProvider){
     console.log('config loaded');
@@ -11,7 +11,7 @@ movieApp.config(function($routeProvider){
         templateUrl: '/views/genres.html',
         controller: 'GenreController as vm'
     }).otherwise(
-        {redirectTo: '/movies'}
+        {redirectTo: '/genres'}
     );
 
 

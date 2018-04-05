@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="vendors/angular.min.js"></script>
   <script src="vendors/angular-route.js"></script>
-  <script src="vendors/angular.js"></script>
   <script src="vendors/angular-animate.min.js"></script>
   <script src="vendors/angular-aria.min.js"></script>
   <script src="vendors/angular-messages.min.js"></script>
@@ -21,8 +20,7 @@
 </head>
 <body ng-app="movieApp">
   <h1>Movie Collection</h1>
-  <div ng-include=" ' views/templates/nav.html' ">
-  </div>
+  <div ng-include=" ' views/templates/nav.html' "></div>
   <main ng-view>
       <!-- this is where stuff goes -->
   </main>
