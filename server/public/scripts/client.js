@@ -1,6 +1,6 @@
-let swapiApp = angular.module("swapiApp", ['ngRoute']);
+let movieApp = angular.module("movieApp", ['ngRoute']);
 
-swapiApp.config(function($routeProvider){
+movieApp.config(function($routeProvider){
     console.log('config loaded');
     
-})
+}); // end route provider

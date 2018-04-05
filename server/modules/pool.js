@@ -1,7 +1,7 @@
 const pg = require('pg');
 const Pool = pg.Pool;
 const config = {
-    database: //must be named,
+    database: 'listings',
     host: 'localhost',
     port: 5432,
     max: 10,
