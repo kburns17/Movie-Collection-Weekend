@@ -25,6 +25,8 @@ self.addMovie = function(movie) {
      });
 } //end ADD movie
 
+// DELETE movie
+self.deleteMovie();
 
 
 self.getMovies();

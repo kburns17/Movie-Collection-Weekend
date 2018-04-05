@@ -27,7 +27,7 @@ CREATE TABLE "movies" (
 "id" serial primary key,
 "name" varchar(80),
 "pic" varchar(255),
-"release date" date,
+"release_date" date,
 "genre" varchar(120),
 "run_time" integer
 );
