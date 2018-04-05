@@ -4,9 +4,9 @@ Client Side
 -[x] set up client and route providers
 -[ ] Set up HTML - Nav [x], Movies [ ], Genres [ ]
 -[x] Create controllers - Movies and genres
--[ ] Inputs for: name, absolute image URL, release date, genere and run time
--[x] GET movies to check communitcation
--[ ]
+-[x] Inputs for: name, absolute image URL, release date, genere and runtime
+-[x] Create GET movies to check communication
+-[x] Create ADD movies to check they are logging
 -[ ]
 
 
@@ -20,3 +20,14 @@ Server Side
 -[x] set up pool to connect and adjust pool.js for DB
 -[ ] 
 
+
+
+
+CREATE TABLE "movies" (
+"id" serial primary key,
+"name" varchar(80),
+"pic" varchar(255),
+"release date" date,
+"genre" varchar(120),
+"run_time" integer
+);

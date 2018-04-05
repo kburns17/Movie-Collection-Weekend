@@ -14,19 +14,21 @@ router.get('/', (req, res) => {
 
 
 
-
-// POST NEW data
+// POST/ADD new movie
 router.post('/', (req, res) => {
-    let swapi = req.body;
-    const queryText = `INSERT INTO swapi (Name, Film-1, People-1) VALUES ($1, $2, $3);`
-    pool.query(queryText, [swapi.name, swapi.type, swapi.score])
+    let movie = req.body;
+    const queryText = `INSERT INTO movies (name, pic, release_date, genre, run_time) 
+                        VALUES ($1, $2, $3, $4, $5);`
+    pool.query(queryText, [movie.name, movie.pic, movie.release_date, movie.genre, movie.run_time])
         .then((response) => {
             console.log(response);
             res.sendStatus(201);
         }).catch((error) => {
             console.log('ERROR ON INSERT', error);
         });
-})
+})// end ADD movie
+
+
 
 //DELETE
 router.delete('/', (req, res) => {

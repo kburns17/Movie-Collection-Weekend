@@ -11,11 +11,21 @@ self.getMovies = function() {
     $http.get('/movies').then(function(response){
         self.movies.list = response.data;
     })
-    
 }; // end GET movies
 
 
-// ADD movies
+// ADD movie
+self.addMovie = function(movie) {
+    console.log('in ADD movie', movie);
+    $http.post('/movies', movie).then(function(response){
+        console.log('movie posted');
+        self.getMovies();
+     }).catch(function(error){
+         console.log('error posting', error);
+     });
+} //end ADD movie
+
+
 
 self.getMovies();
     
