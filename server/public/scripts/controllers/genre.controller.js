@@ -1,5 +1,5 @@
 movieApp.controller('GenreController', ['MovieService',
 function(MovieService) {
-  console.log('Genre Controller Loaded')
+  console.log('GenreController Loaded')
   let self = this;
 }]);
