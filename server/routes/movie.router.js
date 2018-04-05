@@ -2,15 +2,18 @@ let express = require('express');
 let router = express.Router();
 const pool = require('../modules/pool.js')
 
+
+// GET movies from SQL DB
 router.get('/', (req, res) => {
-    //get data in an array and send back
-    let queryText = 'SELECT * FROM starwars';
+    let queryText = 'SELECT * FROM movies';
     pool.query(queryText).then((result) => {
-        const responseArray = result.rows;
-        console.log(responseArray);
+        console.log(result.rows);
         res.send(result.rows);
     })
-});
+}); // end routerGET
+
+
+
 
 // POST NEW data
 router.post('/', (req, res) => {
