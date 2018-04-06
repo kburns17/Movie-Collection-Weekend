@@ -1,14 +1,15 @@
 body{
-    background-color: rgba(157, 206, 228, 0.692)
+    background-color: rgba(102, 172, 131, 0.692)
 }
 
-table {
-    
+ {
+    height: 100px;
+    width: 100px;
 }
 
 table, td, th {
     border: 1px solid black;
-    background-color: rgba(100, 142, 231, 0.349);
+    background-color: rgba(111, 214, 218, 0.349);
     border-collapse: collapse;
     text-align: center; 
 }

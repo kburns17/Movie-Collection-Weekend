@@ -39,6 +39,6 @@ self.deleteMovie = function(movie) {
 
 
 self.getMovies();
-    
+   
 
 }]); // end Movie Service
