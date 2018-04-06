@@ -25,8 +25,17 @@ self.addMovie = function(movie) {
      });
 } //end ADD movie
 
+
 // DELETE movie
-self.deleteMovie();
+self.deleteMovie = function(movie) {
+    console.log('in DELETE', movie);
+    $http.delete('/movies/' + movie.id).then(function(response) {
+        console.log('movie deleted');
+        self.getMovies();
+    }).catch(function(error){
+        console.log('error posting', error);
+    });
+} //end DELETE movie
 
 
 self.getMovies();

@@ -6,4 +6,5 @@ function(MovieService) {
   let movieService = MovieService;
   self.movies = movieService.movies;
   self.addMovie = movieService.addMovie;
-}]);
+  self.deleteMovie = movieService.deleteMovie;
+}]); // end Movie Controller

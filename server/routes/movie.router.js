@@ -30,18 +30,18 @@ router.post('/', (req, res) => {
 
 
 
-//DELETE
-router.delete('/', (req, res) => {
-    let swapi = req.body;
-    let queryText = `DELETE FROM "starwars" WHERE "id" = $1`;
-    pool.query(queryText, [swapi.id])
+// DELETE movie
+router.delete('/:id', (req, res) => {
+    let movieId = req.params.id;
+    let queryText = `DELETE FROM movies WHERE "id" = $1`;
+    pool.query(queryText, [movieId])
         .then((response) => {
             console.log(response);
             res.sendStatus(201);
         }).catch((error) => {
             console.log('ERROR ON DELETE', error);
         });
-});
+});// end DELETE movie
 
 
 module.exports = router;
