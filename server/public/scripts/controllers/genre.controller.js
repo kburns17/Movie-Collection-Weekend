@@ -4,5 +4,8 @@ function(MovieService) {
   let self = this;
 
   let movieService = MovieService
+
   self.genres = movieService.genres;
+  
+  self.addGenre = movieService.addGenre;
 }]);

@@ -28,7 +28,7 @@
         </thead>
         <tbody class="picture" ng-repeat="movie in vm.movies.list">
             <td>{{movie.name}}</td>
-            <td><img src="{{movie.pic}}"></td>
+            <td><img ng-src="{{movie.pic}}"></td>
             <td>{{movie.release_date}}</td>
             <td>{{movie.genre}}</td>
             <td>{{movie.run_time}}</td>

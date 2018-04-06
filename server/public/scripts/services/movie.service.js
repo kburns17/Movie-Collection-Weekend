@@ -11,7 +11,6 @@ self.genres = { list: [ ]};
 
 // GET-movies
 self.getMovies = function() {
-    console.log('In GET movies');
     $http.get('/movies').then(function(response){
         self.movies.list = response.data;
     })
@@ -20,19 +19,17 @@ self.getMovies = function() {
 
 // ADD-movie
 self.addMovie = function(movie) {
-    console.log('in ADD movie', movie);
     $http.post('/movies', movie).then(function(response){
         console.log('movie posted');
         self.getMovies();
      }).catch(function(error){
          console.log('error posting', error);
      });
-} //end ADD movie
+}; //end ADD movie
 
 
 // DELETE-movie
 self.deleteMovie = function(movie) {
-    console.log('in DELETE', movie);
     $http.delete('/movies/' + movie.id).then(function(response) {
         console.log('movie deleted');
         self.getMovies();
@@ -50,9 +47,20 @@ self.getGenres = function() {
 }; //end GET for Genres
 
 //ADD-genre
+self.addGenre = function(genre) {
+    console.log('in ADD genre');
+    $http.post('/genres', genre).then(function(response) {
+        console.log('genre added');
+        self.getGenres();
+    }).catch(function(error) {
+        console.log('error posting genre', error);
+    })
+}; // end ADD-genre
 
 
 //function to loop through and add to DOM
 self.getMovies();
 self.getGenres();
+
+
 }]); // end Movie Service
