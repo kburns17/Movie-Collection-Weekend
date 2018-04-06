@@ -8,14 +8,15 @@
     <input type="text" ng-model="vm.newMovie.release_date" placeholder="Release Date">
     <input type="text" ng-model="vm.newMovie.genre" placeholder="Genre">
     <input type="number" ng-model="vm.newMovie.run_time" placeholder="Run Time (Minutes)">
-    <button ng-click="vm.addMovie(vm.newMovie)">Add A Movie!</button>
+    <button type="reset" ng-click="vm.addMovie(vm.newMovie)">Add A Movie!</button>
+</form>
     <table>
         <thead>
             <th>Movie Name</th>
             <th>Picture URL</th>
             <th>Release Date</th>
             <th>Genre</th>
-            <th>Runtime</th>
+            <th>Runtime (Minutes)</th>
         </thead>
         <tbody class="arrange" ng-repeat="movie in vm.movies.list">
             <td>{{movie.name}}</td>
@@ -23,8 +24,7 @@
             <td>{{movie.release_date}}</td>
             <td>{{movie.genre}}</td>
             <td>{{movie.run_time}}</td>
-            <button ng-click="vm.deleteMovie(movie)">Delete</button>
+            <td><button ng-click="vm.deleteMovie(movie)">Delete</button></td>
         </tbody>
         </table>
-    </form>
 </section>
