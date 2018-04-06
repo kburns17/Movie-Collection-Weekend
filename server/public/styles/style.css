@@ -1,3 +1,8 @@
 body{
     background-color: rgba(157, 206, 228, 0.692)
 }
+
+table {
+    border-collapse: collapse;
+    text-align: center; 
+}
