@@ -5,7 +5,11 @@ movieApp.service('MovieService', ['$http', function($http) {
 //need to create an object containing an array of movies
 self.movies = { list: [] };
 
-// GET movies
+//object containing genres as array
+self.genres = { list: [ ]};
+
+
+// GET-movies
 self.getMovies = function() {
     console.log('In GET movies');
     $http.get('/movies').then(function(response){
@@ -14,7 +18,7 @@ self.getMovies = function() {
 }; // end GET movies
 
 
-// ADD movie
+// ADD-movie
 self.addMovie = function(movie) {
     console.log('in ADD movie', movie);
     $http.post('/movies', movie).then(function(response){
@@ -26,7 +30,7 @@ self.addMovie = function(movie) {
 } //end ADD movie
 
 
-// DELETE movie
+// DELETE-movie
 self.deleteMovie = function(movie) {
     console.log('in DELETE', movie);
     $http.delete('/movies/' + movie.id).then(function(response) {
@@ -37,8 +41,18 @@ self.deleteMovie = function(movie) {
     });
 } //end DELETE movie
 
+//GET-genre
+self.getGenres = function() {
+    console.log('in GET genres');
+    $http.get('/genres').then(function(response){
+        self.genres.list = response.data;
+    });
+}; //end GET for Genres
 
+//ADD-genre
+
+
+//function to loop through and add to DOM
 self.getMovies();
-   
-
+self.getGenres();
 }]); // end Movie Service

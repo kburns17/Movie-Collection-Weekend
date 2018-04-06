@@ -1,7 +1,7 @@
 <section>
     <header>Add Movie by Genres</header>
     <form>
-        <input type="text" ng-model="vm.newMovie.genre" placeholder="Genre Type">
+        <input type="text" ng-model="vm.newGenre.genre" placeholder="Genre Type">
         <button type="reset" ng-click="vm.addGenre(vm.newGenre)">Add Genre</button>
     </form>
     <table>
@@ -11,7 +11,6 @@
         </thead>
         <tbody ng-repeat="genre in vm.genres.list">
             <td>{{genre.genre}}</td>
-            <td></td>
         </tbody>
     </table>
 </section>

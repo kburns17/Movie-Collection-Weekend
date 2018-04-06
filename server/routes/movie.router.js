@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
         console.log(result.rows);
         res.send(result.rows);
     })
-}); // end routerGET
+}); // end routerGET movies
 
 
 
