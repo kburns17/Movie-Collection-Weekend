@@ -5,7 +5,8 @@ const pool = require('../modules/pool.js')
 
 // GET movies from SQL DB
 router.get('/', (req, res) => {
-    let queryText = 'SELECT * FROM movies';
+    let queryText = `SELECT * FROM movies`;
+    //JOIN genres ON movies.genre_id = genres.id;
     pool.query(queryText).then((result) => {
         console.log(result.rows);
         res.send(result.rows);
@@ -14,12 +15,15 @@ router.get('/', (req, res) => {
 
 
 
+
+
 // POST/ADD new movie
 router.post('/', (req, res) => {
     let movie = req.body;
-    const queryText = `INSERT INTO movies (name, pic, release_date, genre, run_time) 
+    console.log('Router Post', movie);
+    const queryText = `INSERT INTO movies (name, pic, release_date, genre_id, run_time) 
                         VALUES ($1, $2, $3, $4, $5);`
-    pool.query(queryText, [movie.name, movie.pic, movie.release_date, movie.genre, movie.run_time])
+    pool.query(queryText, [movie.name, movie.pic, movie.release_date, movie.genre_id, movie.run_time])
         .then((response) => {
             console.log(response);
             res.sendStatus(201);
@@ -34,7 +38,7 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res) => {
     let movieId = req.params.id;
     let queryText = `DELETE FROM movies WHERE "id" = $1`;
-    pool.query(queryText, [movieId])
+    pool.query(queryText, [movieId])    
         .then((response) => {
             console.log(response);
             res.sendStatus(201);

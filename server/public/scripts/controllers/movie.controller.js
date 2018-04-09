@@ -7,4 +7,5 @@ function(MovieService) {
   self.movies = movieService.movies;
   self.addMovie = movieService.addMovie;
   self.deleteMovie = movieService.deleteMovie;
+  self.genres = movieService.genres;
 }]); // end Movie Controller
