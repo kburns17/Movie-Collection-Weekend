@@ -12,7 +12,7 @@ function(MovieService) {
   // DELETE
   self.deleteGenre = movieService.deleteGenre;
 
-  self.removeGenre = function(genre) {
+  self.removeGenre = function(genres) {
     if (genres.current_movies > 0) {
       alert(`That genre has movies in it!`);
     } else {

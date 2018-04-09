@@ -33,7 +33,8 @@ self.addMovie = function(movie) {
 
 // DELETE-movie
 self.deleteMovie = function(movie) {
-    $http.delete('/movies/' + movie.id).then(function(response) {
+    
+    $http.delete('/movies/' + movie.movies_id).then(function(response) {
         self.getMovies();
     }).catch(function(error){
         console.log('error posting', error);
