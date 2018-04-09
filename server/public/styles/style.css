@@ -1,5 +1,5 @@
 body, html {
-    background-color: rgba(248, 7, 7, 0.596);
+    background-color: white;
     /*background-image: url(https://sc-events.s3.amazonaws.com/4062632/main.jpg);*/
     background-size: 100%;
 }
@@ -20,13 +20,12 @@ h1  {
 }
 
 
-.flex-container {
-    display: inline-block;
+.arrange {
+    float: left;
     flex-direction: row;
     padding:20px;
     margin:10px;
-    height: 500px;
-    width: 500px;
+    text-align: center;
 }
 
 

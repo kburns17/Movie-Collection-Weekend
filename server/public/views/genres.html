@@ -15,7 +15,7 @@
         </thead>
         <tbody ng-repeat="genre in vm.genres.list">
             <td>{{genre.genre}}</td>
-            <td></td>
+            <td>{{genre.current_movies}}</td>
             <td><button ng-click="vm.deleteGenre(genre)">Delete</button></td>
         </tbody>
     </table>
