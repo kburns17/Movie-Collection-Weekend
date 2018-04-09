@@ -5,7 +5,15 @@ const pool = require('../modules/pool.js')
 
 // GET movies from SQL DB
 router.get('/', (req, res) => {
-    let queryText = `SELECT * FROM movies`;
+    let queryText = `SELECT "m"."name" as "movies_name", 
+    "m"."id" as "movies_id",
+    "m"."pic" as "movies_pic", 
+    "m"."release_date" as "movies_release_date",
+    "m"."run_time" as "movies_run_time",
+    "m"."genre_id" as "movies_genre_id",
+    "g"."genre" as "genre"
+    FROM "movies" as "m" JOIN "genres" as "g" 
+    ON "m"."genre_id" = "g"."id"`;
     //JOIN genres ON movies.genre_id = genres.id;
     pool.query(queryText).then((result) => {
         console.log(result.rows);

@@ -1,11 +1,14 @@
 <section>
+<br>
+<br>
     <header>Add Movie to Collection</header>
  <br>
  <br>
- <form>
+ 
+ <form>  
     <input type="text" ng-model="vm.newMovie.name" placeholder="Movie Name">
     <input type="text" ng-model="vm.newMovie.pic" placeholder="Picture URL">
-    <input type="text" ng-model="vm.newMovie.release_date" placeholder="Release Date">
+    <input type="text" ng-model="vm.newMovie.release_date" placeholder="Release Year">
     <select type="text" ng-model="vm.newMovie.genre_id" placeholder="Genre">
             <option value="">---Please select---</option>
 
@@ -18,11 +21,11 @@
 <br>
 
         <div class="arrange" ng-repeat="movie in vm.movies.list">
-            <h2>{{movie.name}}</h2>
-            <p><img ng-src="{{movie.pic}}" width="300" height="400"></p>
-            <p>Release Date: {{movie.release_date}}</p>
+            <h2>{{movie.movies_name}}</h2>
+            <p><img ng-src="{{movie.movies_pic}}" width="300" height="400"></p>
+            <p>Release Date: {{movie.movies_release_date}}</p>
             <p>Genre: {{movie.genre}}</p>
-            <p>Runtime: {{movie.run_time}}</p>
+            <p>Runtime (Min): {{movie.movies_run_time}}</p>
             <button ng-click="vm.deleteMovie(movie)">Delete</button>
         </div>
     

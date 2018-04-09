@@ -5,9 +5,7 @@ body, html {
 }
 
 nav header {
-        
         background-image: url(http://www.puresophistry.com/wp-content/uploads/2012/08/My-Movies.jpg);
-        color: white;
         font-family: 'Times New Roman', Times, serif;
         font-size: 36px;
         text-align: center;
@@ -28,6 +26,19 @@ h1  {
     text-align: center;
 }
 
+
+
+nav a {
+    display: inline block;
+    width: 200px;
+    border: 2px solid black;
+    background-color: rgb(236, 16, 16);
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    margin: auto;
+    align-content: center;
+}
 
 
 table, td, th {
