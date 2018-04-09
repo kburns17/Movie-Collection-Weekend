@@ -2,6 +2,7 @@ body, html {
     background-color: white;
     /*background-image: url(https://sc-events.s3.amazonaws.com/4062632/main.jpg);*/
     background-size: 100%;
+    text-align: center;
 }
 
 nav header {
@@ -46,5 +47,7 @@ table, td, th {
     background-color: rgb(245, 248, 248);
     border-collapse: collapse;
     text-align: center; 
+    margin-left:auto; 
+    margin-right:auto;
 }
 
