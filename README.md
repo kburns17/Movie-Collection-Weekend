@@ -8,7 +8,7 @@ The app has two views: Add Movies and Manage Genres.
 It also has the ability to delete a genre if it is not in use. As a fail safe, an user is unable to delete a genre that currently has movies in it. 
 
 
-Future goals for this app are to bring in some angular material, add a sweetalert for the genre delete and potentiall use an API to source the movies.
+Future goals for this app are to bring in some angular material, add a sweetalert for the genre delete and to use an API to source the movies.
 
 To build this app, I employed a SEAN stack. SQL, Express, Angular JS, Node JS. 
 
