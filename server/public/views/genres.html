@@ -6,7 +6,7 @@
     <br>
     <form>
         <input type="text" ng-model="vm.newGenre.genre" placeholder="Genre Type">
-        <button type="reset" ng-click="vm.addGenre(vm.newGenre)">Add Genre</button>
+        <md-button class="md-raised md-primary" type="reset" ng-click="vm.addGenre(vm.newGenre)">Add Genre</md-button>
     </form>
     <br>
     <table>
@@ -18,7 +18,7 @@
         <tbody ng-repeat="genre in vm.genres.list">
             <td>{{genre.genre}}</td>
             <td>{{genre.current_movies}}</td>
-            <td><button ng-click="vm.deleteGenre(genre)">Delete</button></td>
+            <td><md-button class="md-raised md-primary" ng-click="vm.deleteGenre(genre)">Delete</md-button></td>
         </tbody>
     </table>
 </section>

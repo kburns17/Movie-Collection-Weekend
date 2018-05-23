@@ -31,9 +31,8 @@ h1  {
 
 nav a {
     display: inline block;
-    width: 200px;
     border: 2px solid black;
-    background-color: rgb(236, 16, 16);
+    background-color: #F44336;
     padding: 12px;
     text-decoration: none;
     color: black;

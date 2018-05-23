@@ -16,3 +16,10 @@ movieApp.config(function($routeProvider){
 
 
 }); // end route provider
+
+// config for Angular Buttons
+movieApp.config(function($mdThemingProvider) {
+    $mdThemingProvider.theme('default')
+      .primaryPalette('red')
+      .accentPalette('blue');
+ });
